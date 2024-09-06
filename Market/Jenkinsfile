@@ -1,0 +1,68 @@
+pipeline {
+    agent any
+
+    environment {
+        DOTNET_VERSION = '8.0'  // Adjust based on your project’s .NET version
+    }
+
+    stages {
+        // Clone the repository from GitHub
+        stage('Fetch the Source Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Mahmoudnourr/Market.git'
+            }
+        }
+        /*
+        // Install the .NET SDK
+        stage('Install .NET SDK') {
+            steps { 
+                sh 'wget https://dot.net/v1/dotnet-install.sh'
+                sh 'chmod +x ./dotnet-install.sh'
+                sh './dotnet-install.sh --version ${DOTNET_VERSION}'
+                sh 'export PATH="$HOME/.dotnet:$PATH"'
+                sh 'dotnet --version'
+            }
+        } */
+
+        stage('Install .NET Packages') {
+            steps {
+                // Restore NuGet packages (dependencies)
+                sh 'dotnet restore'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build the .NET project
+                sh 'dotnet build --configuration Release'
+            }
+        }
+
+        stage('Test the code') {
+            steps {
+                // Run unit tests for the project
+                sh 'dotnet test --no-build --verbosity normal'
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                // Publish the project (create deployment-ready files)
+                sh 'dotnet publish --configuration Release --output ./publish'
+            }
+        }
+    }
+
+    post {
+        always {
+            // Cleanup, notify or perform other actions
+            echo 'Pipeline finished'
+        }
+        success {
+            echo 'Build and tests completed successfully'
+        }
+        failure {
+            echo 'Build or tests failed'
+        }
+    }
+}

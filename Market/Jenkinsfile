@@ -12,7 +12,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Mahmoudnourr/Market.git'
             }
         }
-        /*
+
+        // ------------------------ ALL STAGES HERE WITHOUT DOCKER -----------------------------
+                
         // Install the .NET SDK
         stage('Install .NET SDK') {
             steps { 
@@ -22,7 +24,7 @@ pipeline {
                 sh 'export PATH="$HOME/.dotnet:$PATH"'
                 sh 'dotnet --version'
             }
-        } */
+        }
 
         stage('Install .NET Packages') {
             steps {

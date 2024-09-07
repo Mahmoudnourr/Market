@@ -53,6 +53,11 @@ pipeline {
                 sh 'dotnet publish --configuration Release --output ./publish'
             }
         }
+
+        // --------------------- With Docker -------------------------
+        /*{
+            Waiting to Dockerize your Laravel app
+        }*/
     }
 
     post {

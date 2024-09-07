@@ -34,9 +34,9 @@ namespace Market.Services
 			ApplicationUser Customer = new ApplicationUser
 			{
 				UserName = registrationDto.UserName,
-				Email = registrationDto.Email,
+				Email = registrationDto.Email.ToLower(),
 				FirstName = registrationDto.FirstName,
-				LastName = registrationDto.LastName,
+				LastName = registrationDto.LastName
 			};
 			var result = await _userManager.CreateAsync(Customer, registrationDto.Password);
 
@@ -83,7 +83,8 @@ namespace Market.Services
 			authModel.Username = user.UserName;
 			authModel.ExpiresOn = jwtSecurityToken.ValidTo;
 			authModel.Roles = rolesList.ToList();
-
+			authModel.FirstName = user.FirstName;
+			authModel.LastName = user.LastName;
 			return authModel;
 		}
 		public async Task<string> AddRoleAsync(AddRoleModel model)
@@ -130,6 +131,12 @@ namespace Market.Services
 				signingCredentials: signingCredentials);
 
 			return jwtSecurityToken;
+		}
+
+		public async Task<ApplicationUser> get(string email)
+		{
+			ApplicationUser user = await _userManager.FindByEmailAsync(email);
+			return user;
 		}
 	}
 }

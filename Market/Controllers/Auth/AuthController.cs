@@ -1,4 +1,5 @@
 ﻿using Market.Dtos;
+using Market.Entities;
 using Market.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,5 +37,27 @@ namespace Market.Controllers.Auth
 				}
 			}
 		}
+		[HttpPost("Login")]
+		public async Task<IActionResult> GetTokenAsync(TokenRequestModel model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return BadRequest(ModelState);
+			}
+			var res = await _authService.GetTokenAsync(model);
+			if (!res.IsAuthenticated)
+			{
+				return BadRequest(res.message);
+			}
+			return Ok(res);
+		}
+		//[HttpGet]
+		/*public async Task<IActionResult> Getus(string email)
+		{
+			ApplicationUser us = await _authService.get(email);
+			return Ok(us);
+		}*/
+
 	}
+
 }

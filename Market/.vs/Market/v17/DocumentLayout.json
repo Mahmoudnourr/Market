@@ -3,52 +3,28 @@
   "WorkspaceRootPath": "D:\\mvc projs\\Store\\Market\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\registrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\registrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:controllers\\auth\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\addrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\addrolemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\authmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\tokenrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\tokenrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\migrations\\20240907123603_d2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:migrations\\20240907123603_d2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\migrations\\20240907122409_d1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:migrations\\20240907122409_d1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,8 +34,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Authmodel.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\Authmodel.cs",
+              "RelativeDocumentMoniker": "Dtos\\Authmodel.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Dtos\\Authmodel.cs",
+              "RelativeToolTip": "Dtos\\Authmodel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T19:11:35.825Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
@@ -82,64 +71,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Auth\\AuthController.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\Auth\\AuthController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T12:15:45.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddRoleModel.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\AddRoleModel.cs",
-              "RelativeDocumentMoniker": "Dtos\\AddRoleModel.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Dtos\\AddRoleModel.cs",
-              "RelativeToolTip": "Dtos\\AddRoleModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T11:16:18.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Entities\\ApplicationUser.cs",
               "ToolTip": "D:\\mvc projs\\Store\\Market\\Entities\\ApplicationUser.cs",
               "RelativeToolTip": "Entities\\ApplicationUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAACAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T10:32:11.535Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\IAuthService.cs",
-              "RelativeToolTip": "Services\\IAuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:18:45.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Authservice.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\Authservice.cs",
-              "RelativeDocumentMoniker": "Services\\Authservice.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\Authservice.cs",
-              "RelativeToolTip": "Services\\Authservice.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAA4wIcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:19:13.369Z",
+              "WhenOpened": "2024-09-07T18:33:22.603Z",
               "EditorCaption": ""
             },
             {
@@ -150,84 +90,47 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\mvc projs\\Store\\Market\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAmwB4AAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAmwD8AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:23:29.959Z",
+              "WhenOpened": "2024-09-07T18:06:46.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Authservice.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\Authservice.cs",
+              "RelativeDocumentMoniker": "Services\\Authservice.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\Authservice.cs",
+              "RelativeToolTip": "Services\\Authservice.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAgwFYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T15:02:59.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Authmodel.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\Authmodel.cs",
-              "RelativeDocumentMoniker": "Dtos\\Authmodel.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Dtos\\Authmodel.cs",
-              "RelativeToolTip": "Dtos\\Authmodel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Auth\\AuthController.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\Auth\\AuthController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAcwDUAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T10:29:10.031Z",
+              "WhenOpened": "2024-09-07T14:31:00.63Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegistrationDto.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\RegistrationDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\RegistrationDto.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Dtos\\RegistrationDto.cs",
-              "RelativeToolTip": "Dtos\\RegistrationDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T10:33:17.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20240907123603_d2.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Migrations\\20240907123603_d2.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240907123603_d2.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Migrations\\20240907123603_d2.cs",
-              "RelativeToolTip": "Migrations\\20240907123603_d2.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T12:36:03.704Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-07T12:40:42.913Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "20240907122409_d1.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Migrations\\20240907122409_d1.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240907122409_d1.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Migrations\\20240907122409_d1.cs",
-              "RelativeToolTip": "Migrations\\20240907122409_d1.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Services\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T12:24:09.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TokenRequestModel.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\TokenRequestModel.cs",
-              "RelativeDocumentMoniker": "Dtos\\TokenRequestModel.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Dtos\\TokenRequestModel.cs",
-              "RelativeToolTip": "Dtos\\TokenRequestModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T11:17:20.705Z"
+              "WhenOpened": "2024-09-07T14:24:15.634Z"
             }
           ]
         }

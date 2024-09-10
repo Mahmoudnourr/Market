@@ -51,7 +51,23 @@ namespace Market
 				};
 			});
 
-
+                       	// add cores
+	builder.Services.AddCors(options =>
+	{
+		options.AddDefaultPolicy(
+			policy =>
+			{
+				policy.AllowAnyOrigin()
+						.AllowAnyMethod()
+						.AllowAnyHeader();
+			});
+	});
+	builder.Services.AddAuthentication(
+options =>
+{
+    options.DefaultScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+})
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 

@@ -1,6 +1,7 @@
 ﻿using Market.Dtos;
 using Market.Entities;
 using Market.Helper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -11,11 +12,11 @@ namespace Market.Services
 {
 	public class Authservice : IAuthService
 	{
-		public readonly UserManager<ApplicationUser> _userManager;
+		public readonly UserManager<application_user> _userManager;
 		private readonly RoleManager<IdentityRole> _roleManager;
 		private readonly JWT _jwt;
 
-		public Authservice(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, JWT jwt)
+		public Authservice(UserManager<application_user> userManager, RoleManager<IdentityRole> roleManager, JWT jwt)
 		{
 			_userManager = userManager;
 			_roleManager = roleManager;
@@ -31,12 +32,12 @@ namespace Market.Services
 
 			}
 
-			ApplicationUser Customer = new ApplicationUser
+			application_user Customer = new application_user
 			{
 				UserName = registrationDto.UserName,
 				Email = registrationDto.Email.ToLower(),
-				FirstName = registrationDto.FirstName,
-				LastName = registrationDto.LastName
+				first_name = registrationDto.FirstName,
+				last_name = registrationDto.LastName
 			};
 			var result = await _userManager.CreateAsync(Customer, registrationDto.Password);
 
@@ -83,8 +84,8 @@ namespace Market.Services
 			authModel.Username = user.UserName;
 			authModel.ExpiresOn = jwtSecurityToken.ValidTo;
 			authModel.Roles = rolesList.ToList();
-			authModel.FirstName = user.FirstName;
-			authModel.LastName = user.LastName;
+			authModel.FirstName = user.first_name;
+			authModel.LastName = user.last_name;
 			return authModel;
 		}
 		public async Task<string> AddRoleAsync(AddRoleModel model)
@@ -101,7 +102,8 @@ namespace Market.Services
 
 			return result.Succeeded ? string.Empty : "Sonething went wrong";
 		}
-		private async Task<JwtSecurityToken> CreateJwtToken(ApplicationUser user)
+
+		private async Task<JwtSecurityToken> CreateJwtToken(application_user user)
 		{
 			var userClaims = await _userManager.GetClaimsAsync(user);
 			var roles = await _userManager.GetRolesAsync(user);
@@ -133,10 +135,11 @@ namespace Market.Services
 			return jwtSecurityToken;
 		}
 
-		public async Task<ApplicationUser> get(string email)
+		public async Task<application_user> get(string email)
 		{
-			ApplicationUser user = await _userManager.FindByEmailAsync(email);
+			application_user user = await _userManager.FindByEmailAsync(email);
 			return user;
+
 		}
 	}
 }

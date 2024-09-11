@@ -19,7 +19,7 @@ namespace Market
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
-			builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<MarketContext>();
+			builder.Services.AddIdentity<application_user, IdentityRole>().AddEntityFrameworkStores<MarketContext>();
 			builder.Services.AddDbContext<MarketContext>(options =>
 			options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
 			ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
@@ -51,23 +51,23 @@ namespace Market
 				};
 			});
 
-                       	// add cores
-	builder.Services.AddCors(options =>
-	{
-		options.AddDefaultPolicy(
-			policy =>
+			// add cores
+			builder.Services.AddCors(options =>
 			{
-				policy.AllowAnyOrigin()
-						.AllowAnyMethod()
-						.AllowAnyHeader();
+				options.AddDefaultPolicy(
+					policy =>
+					{
+						policy.AllowAnyOrigin()
+								.AllowAnyMethod()
+								.AllowAnyHeader();
+					});
 			});
-	});
-	builder.Services.AddAuthentication(
-options =>
-{
-    options.DefaultScheme = IdentityConstants.ApplicationScheme;
-    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
-})
+			builder.Services.AddAuthentication(
+		options =>
+		{
+			options.DefaultScheme = IdentityConstants.ApplicationScheme;
+			options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+		});
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
 

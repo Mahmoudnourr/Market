@@ -2,17 +2,27 @@
 
 namespace Market.Entities
 {
-	public class Product
+	public class product
 	{
-		public int Id { get; set; }
-		public string Name { get; set; }
-		public string Description { get; set; }
+		public int id { get; set; }
+		
+		public string name { get; set; }
+		
+		public string description { get; set; }
 
-		public int CategoryId { get; set; }
-		[ForeignKey("CategoryId")]
-		public Category Category { get; set; }
-		public float Price { get; set; }
-		public int StockQuantity { get; set; }
-		public Discount? Discount { get; set; }
+		
+		public int category_id { get; set; }
+	
+		[ForeignKey(nameof(category_id))]
+		
+		public category category { get; set; }
+		
+		public float price { get; set; }
+		
+		public int stock_quantity { get; set; }
+		
+		public discount? discount { get; set; }
+		
+		public byte[] image { get; set; }
 	}
 }

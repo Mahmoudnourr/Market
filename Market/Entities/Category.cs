@@ -1,8 +1,13 @@
-﻿namespace Market.Entities
+﻿
+using System.ComponentModel.DataAnnotations;
+
+namespace Market.Entities
 {
-	public class Category
+	public class category
 	{
-		public int CategoryId { get; set; }
-		public string CategoryName { get; set; }
+		[Key]
+		public int category_id { get; set; }
+		public string category_name { get; set; }
+		public ICollection<product> products { get; set; }
 	}
 }

@@ -22,7 +22,7 @@ namespace Market.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("Market.Entities.ApplicationUser", b =>
+            modelBuilder.Entity("Market.Entities.application_user", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -35,20 +35,11 @@ namespace Market.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
@@ -83,6 +74,20 @@ namespace Market.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
 
+                    b.Property<DateTime>("created_at")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("first_name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("last_name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("updated_at")
+                        .HasColumnType("datetime(6)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -92,29 +97,10 @@ namespace Market.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex");
 
-                    b.ToTable("AspNetUsers", (string)null);
+                    b.ToTable("users", (string)null);
                 });
 
-            modelBuilder.Entity("Market.Entities.Cart", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Carts");
-                });
-
-            modelBuilder.Entity("Market.Entities.CartItem", b =>
+            modelBuilder.Entity("Market.Entities.blacked_list_token", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -122,39 +108,36 @@ namespace Market.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("Cartid")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("expiry_date")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Cartid");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("CartItems");
-                });
-
-            modelBuilder.Entity("Market.Entities.Category", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("CategoryId"));
-
-                    b.Property<string>("CategoryName")
+                    b.Property<string>("token")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("blacked_list_tokens");
                 });
 
-            modelBuilder.Entity("Market.Entities.Discount", b =>
+            modelBuilder.Entity("Market.Entities.category", b =>
+                {
+                    b.Property<int>("category_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("category_id"));
+
+                    b.Property<string>("category_name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("category_id");
+
+                    b.ToTable("categories");
+                });
+
+            modelBuilder.Entity("Market.Entities.discount", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -162,145 +145,63 @@ namespace Market.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<float>("DiscountPercentage")
+                    b.Property<float>("discount_percentage")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<DateTime>("StartTime")
+                    b.Property<DateTime>("end_date")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("start_time")
+                        .HasColumnType("datetime(6)");
+
                     b.HasKey("id");
 
-                    b.ToTable("Discounts");
+                    b.ToTable("discounts");
                 });
 
-            modelBuilder.Entity("Market.Entities.Order", b =>
+            modelBuilder.Entity("Market.Entities.product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("CustomerId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("category_id")
+                        .HasColumnType("int");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Status")
+                    b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<float>("TotalAmount")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Market.Entities.OrderItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int?>("discountid")
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+                    b.Property<byte[]>("image")
+                        .IsRequired()
+                        .HasColumnType("longblob");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<float>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("OrderItems");
-                });
-
-            modelBuilder.Entity("Market.Entities.Payment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<float>("Amount")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Method")
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("Payments");
-                });
-
-            modelBuilder.Entity("Market.Entities.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("Discountid")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<float>("Price")
+                    b.Property<float>("price")
                         .HasColumnType("float");
 
-                    b.Property<int>("StockQuantity")
+                    b.Property<int>("stock_quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("category_id");
 
-                    b.HasIndex("Discountid");
+                    b.HasIndex("discountid");
 
-                    b.ToTable("Products");
+                    b.ToTable("products");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -326,7 +227,7 @@ namespace Market.Migrations
                         .IsUnique()
                         .HasDatabaseName("RoleNameIndex");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("roles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -351,7 +252,7 @@ namespace Market.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", (string)null);
+                    b.ToTable("role_claims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -376,7 +277,7 @@ namespace Market.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", (string)null);
+                    b.ToTable("user_claims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -398,7 +299,7 @@ namespace Market.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", (string)null);
+                    b.ToTable("User_Logins", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -413,7 +314,7 @@ namespace Market.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", (string)null);
+                    b.ToTable("user_roles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -432,91 +333,24 @@ namespace Market.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", (string)null);
+                    b.ToTable("user_tokens", (string)null);
                 });
 
-            modelBuilder.Entity("Market.Entities.Cart", b =>
+            modelBuilder.Entity("Market.Entities.product", b =>
                 {
-                    b.HasOne("Market.Entities.ApplicationUser", "Customer")
+                    b.HasOne("Market.Entities.category", "category")
+                        .WithMany("products")
+                        .HasForeignKey("category_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Market.Entities.discount", "discount")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("discountid");
 
-                    b.Navigation("Customer");
-                });
+                    b.Navigation("category");
 
-            modelBuilder.Entity("Market.Entities.CartItem", b =>
-                {
-                    b.HasOne("Market.Entities.Cart", null)
-                        .WithMany("Items")
-                        .HasForeignKey("Cartid");
-
-                    b.HasOne("Market.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Market.Entities.Order", b =>
-                {
-                    b.HasOne("Market.Entities.ApplicationUser", "Customer")
-                        .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("Market.Entities.OrderItem", b =>
-                {
-                    b.HasOne("Market.Entities.Order", "Order")
-                        .WithMany("Items")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Market.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Market.Entities.Payment", b =>
-                {
-                    b.HasOne("Market.Entities.Order", "Order")
-                        .WithMany("Payments")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("Market.Entities.Product", b =>
-                {
-                    b.HasOne("Market.Entities.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Market.Entities.Discount", "Discount")
-                        .WithMany()
-                        .HasForeignKey("Discountid");
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Discount");
+                    b.Navigation("discount");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -530,7 +364,7 @@ namespace Market.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Market.Entities.ApplicationUser", null)
+                    b.HasOne("Market.Entities.application_user", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -539,7 +373,7 @@ namespace Market.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Market.Entities.ApplicationUser", null)
+                    b.HasOne("Market.Entities.application_user", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -554,7 +388,7 @@ namespace Market.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Market.Entities.ApplicationUser", null)
+                    b.HasOne("Market.Entities.application_user", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -563,23 +397,16 @@ namespace Market.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Market.Entities.ApplicationUser", null)
+                    b.HasOne("Market.Entities.application_user", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Market.Entities.Cart", b =>
+            modelBuilder.Entity("Market.Entities.category", b =>
                 {
-                    b.Navigation("Items");
-                });
-
-            modelBuilder.Entity("Market.Entities.Order", b =>
-                {
-                    b.Navigation("Items");
-
-                    b.Navigation("Payments");
+                    b.Navigation("products");
                 });
 #pragma warning restore 612, 618
         }

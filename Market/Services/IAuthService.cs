@@ -7,6 +7,6 @@ namespace Market.Services
 	{
 		Task<Authmodel> RegisterAsync(RegistrationDto registrationDto);
 		Task<Authmodel> GetTokenAsync(TokenRequestModel model);
-		Task<ApplicationUser> get(string email);
+		Task<application_user> get(string email);
 	}
 }

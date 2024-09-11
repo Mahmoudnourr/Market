@@ -51,12 +51,18 @@ namespace Market.Controllers.Auth
 			}
 			return Ok(res);
 		}
-		//[HttpGet]
-		/*public async Task<IActionResult> Getus(string email)
+		[HttpGet]
+		public IActionResult Test()
 		{
-			ApplicationUser us = await _authService.get(email);
+			Authmodel s = new Authmodel();
+			return Ok(s);
+		}
+		[HttpGet("Get")]
+		public async Task<IActionResult> Getus(string email)
+		{
+			application_user us = await _authService.get(email);
 			return Ok(us);
-		}*/
+		}
 
 	}
 

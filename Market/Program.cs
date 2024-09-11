@@ -70,7 +70,8 @@ options =>
 })
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
-
+                         builder.Services.AddScoped<IProductService, ProductRepository>();
+                         builder.Services.AddScoped<ICategoryService, CategoryRepository>();
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.

@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Market.Entities
 {
@@ -8,6 +7,7 @@ namespace Market.Entities
 		[Key]
 		public int category_id { get; set; }
 		public string category_name { get; set; }
+		public string? category_description { get; set; }
 		public ICollection<product> products { get; set; }
 	}
 }

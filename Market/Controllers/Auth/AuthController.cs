@@ -49,6 +49,10 @@ namespace Market.Controllers.Auth
 			{
 				return BadRequest(res.message);
 			}
+			if(!string.IsNullOrEmpty(res.RefreshToken))
+			{
+				SetRefreshToken(res.RefreshToken,res.RefreshTokenExpiration);
+			}
 			return Ok(res);
 		}
 		[HttpGet]
@@ -62,6 +66,15 @@ namespace Market.Controllers.Auth
 		{
 			application_user us = await _authService.get(email);
 			return Ok(us);
+		}
+		private void SetRefreshToken(string refreshToken,DateTime expires)
+		{
+			var cookieOptions = new CookieOptions
+			{
+				HttpOnly = true,
+				Expires = expires.ToLocalTime(),
+			};
+			Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
 		}
 
 	}

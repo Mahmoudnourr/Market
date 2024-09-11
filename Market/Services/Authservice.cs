@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Market.Services
@@ -56,7 +57,9 @@ namespace Market.Services
 			return new Authmodel
 			{
 				Email = Customer.Email,
-				ExpiresOn = jwtSecurityToken.ValidTo,
+				FirstName = Customer.first_name,
+				LastName = Customer.last_name,
+			//	ExpiresOn = jwtSecurityToken.ValidTo,
 				IsAuthenticated = true,
 				Roles = new List<string> { "Customer" },
 				Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
@@ -82,10 +85,25 @@ namespace Market.Services
 			authModel.Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
 			authModel.Email = user.Email;
 			authModel.Username = user.UserName;
-			authModel.ExpiresOn = jwtSecurityToken.ValidTo;
+		//	authModel.ExpiresOn = jwtSecurityToken.ValidTo;
 			authModel.Roles = rolesList.ToList();
 			authModel.FirstName = user.first_name;
 			authModel.LastName = user.last_name;
+            if(user.refresh_tokens.Any(t=>t.is_active))
+             {
+				var activeRefreshToken = user.refresh_tokens.FirstOrDefault(t=>t.is_active);
+				authModel.RefreshToken = activeRefreshToken.token;
+				authModel.RefreshTokenExpiration = activeRefreshToken.expires_on;
+			 }
+			 else
+			 {
+				var refreshToken = GenerateRefreshTokenAsync();
+				authModel.RefreshToken = refreshToken.token;
+				authModel.RefreshTokenExpiration = refreshToken.expires_on;
+				user.refresh_tokens.Add(refreshToken);
+				await _userManager.UpdateAsync(user);
+			 }
+
 			return authModel;
 		}
 		public async Task<string> AddRoleAsync(AddRoleModel model)
@@ -140,6 +158,18 @@ namespace Market.Services
 			application_user user = await _userManager.FindByEmailAsync(email);
 			return user;
 
+		}
+		private refresh_token GenerateRefreshTokenAsync ()
+		{
+             var randomnumber = new byte[32];
+			 using var rng = new RNGCryptoServiceProvider();
+			 rng.GetBytes(randomnumber);
+			 return new refresh_token
+			 {
+				token = Convert.ToBase64String(randomnumber),
+				expires_on = DateTime.Now.AddDays(10),
+				created_on= DateTime.Now
+			 };
 		}
 	}
 }

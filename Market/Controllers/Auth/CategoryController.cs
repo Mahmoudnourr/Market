@@ -1,4 +1,5 @@
 using Market.Data;
+using Market.Dtos;
 using Market.Entities;
 using Market.Entities;
 using Market.Repositories;
@@ -17,65 +18,81 @@ namespace Market.Controllers
 			categoryService = _categryService;
 		}
 
-		[HttpGet]
+		[HttpGet("GetAllCategories")]
 		public async Task<IActionResult> GetAllCategories()
 		{
-			if (!ModelState.IsValid)
-			{
-				return BadRequest(ModelState);
-			}
 			var categories = await categoryService.GetAllCategoriesAsync();
-			return Ok(categories);
+			if (categories == null)
+			{
+				return NotFound("No Categories Added ");
+			}
+			else
+				return Ok(categories);
 		}
-		[HttpGet("{id}")]
+		[HttpGet("GetCategoryById")]
 		public async Task<IActionResult> GetCategoryById(int id)
 		{
-			if (!ModelState.IsValid)
-			{
-				return BadRequest(ModelState);
-			}
 			var category = await categoryService.GetCategoryById(id);
-			if (category == null)
+			if (category != null)
 			{
-				return NotFound();
+				return Ok(category);
 			}
-			return Ok(category);
+			else
+				return BadRequest("Category not found");
 		}
 
-		[HttpPost]
-		public async Task<IActionResult> AddCategory([FromBody] category NewCategory)
+		[HttpPost("AddCategory")]
+		public async Task<IActionResult> AddCategory([FromBody]  CategoryDto NewCategory)
 		{
 			if (!ModelState.IsValid)
 			{
 				return BadRequest(ModelState);
 			}
-			var category = await categoryService.AddNewCategory(NewCategory);
-			return Ok(category);
+			var result = await categoryService.AddNewCategory(NewCategory);
+			if (result.Is_success)
+			{
+				return Ok(result);
+			}
+			return BadRequest(result.Message);
 		}
 
-		[HttpPut]
-		public async Task<IActionResult> EditCategory([FromBody] category category)
+		[HttpPut("EditCategory")]
+		public async Task<IActionResult> EditCategory([FromBody] CategoryDto category,int id)
 		{
-			var CuuretCategory = await categoryService.EditCategory(category);
-			if (CuuretCategory == null)
+			var result = await categoryService.EditCategory(category,id);
+			if (!result.Is_success)
 			{
-				return BadRequest();
+				return BadRequest(result.Message);
+
 			}
-			return Ok(CuuretCategory);
+			return Ok(result);
 		}
-		[HttpDelete("{id}")]
+		[HttpDelete("DeleteCategory")]
+		
 		public async Task<IActionResult> DeleteCategory(int id)
 		{
-			if (!ModelState.IsValid)
+			var result = await categoryService.DeleteCategory(id);
+			if (result.IsSuccess)
 			{
-				return BadRequest(ModelState);
+				return Ok(result);
 			}
-			var category = await categoryService.DeleteCategory(id);
-			if (category == null)
+			return BadRequest(result.Message);
+		}
+		[HttpGet("GetTheProductsOfCategory")]
+		public async Task<IActionResult> GetTheProductsOfCategory(int id)
+		{
+			var products = await categoryService.GetTheProductsOfCategory(id);
+			if (products == null)
 			{
 				return NotFound("Category not found");
 			}
-			return Ok();
+			if (products.Count == 0)
+			{
+				return NotFound("No products found for this category");
+			}
+			else
+				return Ok(products);
 		}
 	}
+
 }

@@ -1,4 +1,3 @@
-
 using Market.Data;
 using Market.Entities;
 using Market.Helper;
@@ -48,21 +47,23 @@ namespace Market
 					ValidateLifetime = true,
 					ValidIssuer = builder.Configuration["JWT:Issuer"],
 					ValidAudience = builder.Configuration["JWT:Audience"],
+					ClockSkew=TimeSpan.Zero,
 					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
 				};
 			});
 
-			// add cores
+			// Replace the existing CORS configuration with this:
 			builder.Services.AddCors(options =>
 			{
 				options.AddDefaultPolicy(
 					policy =>
 					{
 						policy.AllowAnyOrigin()
-								.AllowAnyMethod()
-								.AllowAnyHeader();
+							.AllowAnyMethod()
+							.AllowAnyHeader();
 					});
 			});
+
 			builder.Services.AddAuthentication(
 		options =>
 		{
@@ -101,7 +102,7 @@ namespace Market
 			app.UseHttpsRedirection();
 			app.UseAuthentication();
 			app.UseAuthorization();
-
+			app.UseCors();
 
 			app.MapControllers();
 

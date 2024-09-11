@@ -57,8 +57,8 @@ namespace Market.Services
 		public async Task<Result> AddProductAsync(ProductDto pr)
 		{
 			var res = await context.products.AnyAsync(e => e.name == pr.Name);
-			var res2 = await context.categories.AnyAsync(e => e.category_id == pr.CategoryId);
-			if (!res2)
+			var res2 = await context.categories.FindAsync(pr.CategoryId);
+			if (res2 == null)
 			{
 				return new Result(false, "The Category Is not Found");
 			}
@@ -66,6 +66,7 @@ namespace Market.Services
 			{
 				return new Result(false, "The Name Of the product is already found");
 			}
+			
 
 			var str = new MemoryStream();
 			await pr.img.CopyToAsync(str);
@@ -74,6 +75,7 @@ namespace Market.Services
 				name = pr.Name,
 				price = pr.Price,
 				description = pr.Description,
+				category = res2,
 				category_id = pr.CategoryId,
 				image = str.ToArray(),
 				stock_quantity = pr.stock_quantity,

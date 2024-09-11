@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vV0bvXokwEg=",
+  "dgSpecHash": "nckSUS2+kVo=",
   "success": true,
-  "projectFilePath": "d:\\mvc projs\\Store\\Market\\Market.csproj",
+  "projectFilePath": "D:\\mvc projs\\Store\\Market\\Market.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows 10\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

@@ -21,7 +21,7 @@ namespace Market.Dtos
 
 
 		[Required]
-		[RegularExpression("[a-zA-Z][a-zA-Z0-9-_]{3,32}", ErrorMessage = "The Username is Invalid")]
+		//[RegularExpression("[a-zA-Z][a-zA-Z0-9-_]{3,32}", ErrorMessage = "The Username is Invalid")]
 		public string UserName { get; set; }
 	}
 }

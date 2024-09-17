@@ -2,6 +2,7 @@
 using Market.Data;
 using Market.Entities;
 using Market.Helper;
+using Market.Repositories;
 using Market.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -67,9 +68,26 @@ namespace Market
 		{
 			options.DefaultScheme = IdentityConstants.ApplicationScheme;
 			options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+
 		});
+			builder.Services.AddAuthorization(options =>
+			{
+
+				options.AddPolicy("Customer", policy =>
+				{
+					policy.RequireAuthenticatedUser();
+				});
+
+			});
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
+			builder.Services.AddScoped<IProductService, ProductRepository>();
+			builder.Services.AddScoped<ICategoryService, CategoryRepository>();
+			/*builder.Services.Configure<IdentityOptions>(options =>
+			{
+				options.User.RequireUniqueEmail = false; 
+				options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+			});*/
 
 			var app = builder.Build();
 

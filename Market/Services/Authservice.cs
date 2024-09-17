@@ -100,7 +100,7 @@ namespace Market.Services
 
 			var result = await _userManager.AddToRoleAsync(user, model.Role);
 
-			return result.Succeeded ? string.Empty : "Sonething went wrong";
+			return result.Succeeded ? string.Empty : "Something went wrong";
 		}
 
 		private async Task<JwtSecurityToken> CreateJwtToken(application_user user)
@@ -114,7 +114,7 @@ namespace Market.Services
 
 			var claims = new[]
 			{
-				new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+				new Claim(JwtRegisteredClaimNames.Sub, user.Id),
 				new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
 				new Claim(JwtRegisteredClaimNames.Email, user.Email),
 				new Claim("uid", user.Id)

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.Migrations
 {
     [DbContext(typeof(MarketContext))]
-    [Migration("20240911161059_first2")]
-    partial class first2
+    [Migration("20240917072149_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -342,7 +342,7 @@ namespace Market.Migrations
             modelBuilder.Entity("Market.Entities.product", b =>
                 {
                     b.HasOne("Market.Entities.category", "category")
-                        .WithMany()
+                        .WithMany("products")
                         .HasForeignKey("category_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -405,6 +405,11 @@ namespace Market.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Market.Entities.category", b =>
+                {
+                    b.Navigation("products");
                 });
 #pragma warning restore 612, 618
         }

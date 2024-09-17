@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.Migrations
 {
     [DbContext(typeof(MarketContext))]
-    [Migration("20240911172010_addprincat3")]
-    partial class addprincat3
+    [Migration("20240917073108_first2")]
+    partial class first2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

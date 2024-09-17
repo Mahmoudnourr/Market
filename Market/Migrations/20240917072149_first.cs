@@ -16,7 +16,7 @@ namespace Market.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "BlackedListTokens",
+                name: "blacked_list_tokens",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -27,12 +27,12 @@ namespace Market.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BlackedListTokens", x => x.Id);
+                    table.PrimaryKey("PK_blacked_list_tokens", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Categories",
+                name: "categories",
                 columns: table => new
                 {
                     category_id = table.Column<int>(type: "int", nullable: false)
@@ -42,12 +42,12 @@ namespace Market.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.category_id);
+                    table.PrimaryKey("PK_categories", x => x.category_id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Discounts",
+                name: "discounts",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -60,7 +60,7 @@ namespace Market.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Discounts", x => x.id);
+                    table.PrimaryKey("PK_discounts", x => x.id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -125,7 +125,7 @@ namespace Market.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Products",
+                name: "products",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -142,17 +142,17 @@ namespace Market.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.id);
+                    table.PrimaryKey("PK_products", x => x.id);
                     table.ForeignKey(
-                        name: "FK_Products_Categories_category_id",
+                        name: "FK_products_categories_category_id",
                         column: x => x.category_id,
-                        principalTable: "Categories",
+                        principalTable: "categories",
                         principalColumn: "category_id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Products_Discounts_discountid",
+                        name: "FK_products_discounts_discountid",
                         column: x => x.discountid,
-                        principalTable: "Discounts",
+                        principalTable: "discounts",
                         principalColumn: "id");
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -285,13 +285,13 @@ namespace Market.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_category_id",
-                table: "Products",
+                name: "IX_products_category_id",
+                table: "products",
                 column: "category_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_discountid",
-                table: "Products",
+                name: "IX_products_discountid",
+                table: "products",
                 column: "discountid");
 
             migrationBuilder.CreateIndex(
@@ -336,10 +336,10 @@ namespace Market.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BlackedListTokens");
+                name: "blacked_list_tokens");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "products");
 
             migrationBuilder.DropTable(
                 name: "role_claims");
@@ -357,10 +357,10 @@ namespace Market.Migrations
                 name: "user_tokens");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "categories");
 
             migrationBuilder.DropTable(
-                name: "Discounts");
+                name: "discounts");
 
             migrationBuilder.DropTable(
                 name: "roles");

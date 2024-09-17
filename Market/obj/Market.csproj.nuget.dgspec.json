@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\mvc projs\\Store\\Market\\Market.csproj": {}
+    "d:\\mvc projs\\Store\\Market\\Market.csproj": {}
   },
   "projects": {
-    "D:\\mvc projs\\Store\\Market\\Market.csproj": {
+    "d:\\mvc projs\\Store\\Market\\Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\mvc projs\\Store\\Market\\Market.csproj",
+        "projectUniqueName": "d:\\mvc projs\\Store\\Market\\Market.csproj",
         "projectName": "Market",
-        "projectPath": "D:\\mvc projs\\Store\\Market\\Market.csproj",
+        "projectPath": "d:\\mvc projs\\Store\\Market\\Market.csproj",
         "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-        "outputPath": "D:\\mvc projs\\Store\\Market\\obj\\",
+        "outputPath": "d:\\mvc projs\\Store\\Market\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

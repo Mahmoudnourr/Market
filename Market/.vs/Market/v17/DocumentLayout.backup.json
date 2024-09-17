@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\mvc projs\\Store\\Market\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\controllers\\auth\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:controllers\\auth\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\controllers\\auth\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:controllers\\auth\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\controllers\\auth\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:controllers\\auth\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\services\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:services\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|d:\\mvc projs\\store\\market\\dtos\\registrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D6711F7-436B-4652-BA82-0B4A6F7F2EA6}|Market.csproj|solutionrelative:dtos\\registrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -141,8 +141,12 @@
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IProductService.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\IProductService.cs",
               "RelativeDocumentMoniker": "Services\\IProductService.cs",
@@ -150,24 +154,11 @@
               "RelativeToolTip": "Services\\IProductService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T10:10:51.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-14T10:10:51.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "Services\\ProductRepository.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\ProductRepository.cs",
-              "RelativeToolTip": "Services\\ProductRepository.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAiwFIAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:47:50.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ProductDto.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Entities\\ProductDto.cs",
               "RelativeDocumentMoniker": "Entities\\ProductDto.cs",
@@ -179,20 +170,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\Auth\\ProductController.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\ProductController.cs",
-              "RelativeToolTip": "Controllers\\Auth\\ProductController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKsAAAAEAAAAAAAAAA==",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\ProductController.cs*",
+              "RelativeToolTip": "Controllers\\Auth\\ProductController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T15:19:10.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "product.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Entities\\Product.cs",
@@ -204,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -216,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Controllers\\Auth\\CategoryController.cs",
               "RelativeDocumentMoniker": "Controllers\\Auth\\CategoryController.cs",
@@ -224,12 +215,11 @@
               "RelativeToolTip": "Controllers\\Auth\\CategoryController.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAAAcwDgAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T15:19:02.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T15:19:02.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -242,7 +232,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "Services\\CategoryRepository.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\CategoryRepository.cs",
+              "RelativeToolTip": "Services\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:51:20.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Services\\ProductRepository.cs",
+              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\ProductRepository.cs",
+              "RelativeToolTip": "Services\\ProductRepository.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAiwFIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T17:47:50.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UpdateProductDto.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\UpdateProductDto.cs",
               "RelativeDocumentMoniker": "Dtos\\UpdateProductDto.cs",
@@ -253,12 +267,8 @@
               "WhenOpened": "2024-09-14T09:56:48.955Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AddProductDto.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\AddProductDto.cs",
               "RelativeDocumentMoniker": "Dtos\\AddProductDto.cs",
@@ -270,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "GetProductWithCatDto.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Dtos\\GetProductWithCatDto.cs",
               "RelativeDocumentMoniker": "Dtos\\GetProductWithCatDto.cs",
@@ -282,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MaxFileSizeAttribute.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Validation\\MaxFileSizeAttribute.cs",
               "RelativeDocumentMoniker": "Validation\\MaxFileSizeAttribute.cs",
@@ -306,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "20240917072149_first.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Migrations\\20240917072149_first.cs",
               "RelativeDocumentMoniker": "Migrations\\20240917072149_first.cs",
@@ -318,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "discount.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Entities\\discount.cs",
               "RelativeDocumentMoniker": "Entities\\discount.cs",
@@ -330,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "MarketContext.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Data\\MarketContext.cs",
               "RelativeDocumentMoniker": "Data\\MarketContext.cs",
@@ -342,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AllowedExtensionsAttribute.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Validation\\AllowedExtensionsAttribute.cs",
               "RelativeDocumentMoniker": "Validation\\AllowedExtensionsAttribute.cs",
@@ -354,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "category.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Entities\\category.cs",
               "RelativeDocumentMoniker": "Entities\\category.cs",
@@ -366,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Authservice.cs",
               "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\Authservice.cs",
               "RelativeDocumentMoniker": "Services\\Authservice.cs",
@@ -375,18 +385,6 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAwwGQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T15:02:59.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "D:\\mvc projs\\Store\\Market\\Services\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "Services\\CategoryRepository.cs",
-              "ToolTip": "D:\\mvc projs\\Store\\Market\\Services\\CategoryRepository.cs",
-              "RelativeToolTip": "Services\\CategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T17:51:20.588Z"
             },
             {
               "$type": "Document",

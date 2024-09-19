@@ -1,3 +1,4 @@
+
 ﻿using Market.Dtos;
 using Market.Validation;
 using System.ComponentModel.DataAnnotations;
@@ -26,5 +27,4 @@ namespace Market.Entities
 
 		public int stock_quantity { get; set; }
 	}
-
 }
